@@ -1,12 +1,15 @@
 """
 mlperf inference benchmarking tool
 """
-
 from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
 # pylint: disable=unused-argument,missing-docstring
+
+import tensorflow as tf
+from tensorflow.python.client import timeline
+
 
 import argparse
 import json
@@ -348,8 +351,17 @@ def main():
     count = args.count if args.count else ds.get_item_count()
     result_list = []
     result_dict = {"good": 0, "total": 0}
-    execute_parallel(model, ds, count, args.threads, result_list, result_dict,
+    res = execute_parallel(model, ds, count, args.threads, result_list, result_dict,
                      check_acc=True, post_process=postprocessor)
+    #with tf.Session() as sses:
+    #    sses.run(tf.global_variables_initializer())
+    #    options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
+    #    run_metadata = tf.RunMetadata()
+    #    sses.run(res, options=options, run_metadata=run_metadata)
+    #    fetched_timeline = timeline.Timeline(run_metadata.step_stats)
+    #    chrome_trace = fetched_timeline.generate_chrome_trace_format()
+    #    with open('timeline_01.json', 'w') as f:
+    #        f.write(chrome_trace)
     report_result("check_accuracy", 0., final_results, result_list, result_dict, check_acc=True)
 
     #

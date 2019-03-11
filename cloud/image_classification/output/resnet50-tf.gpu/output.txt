@@ -1,0 +1,221 @@
+Clearing caches.
+3
+STARTING RUN AT 2019-03-06 05:09:35 PM
+Namespace(backend='tensorflow', batch_size=1, cache=0, count=None, data_format=None, dataset='imagenet', dataset_list=None, dataset_path='/data', inputs=['input_tensor:0'], max_latency=[0.01, 0.05, 0.1, 0.2, 0.4], model='/model/resnet50_v1.pb', output='/output/results.json', outputs=['ArgMax:0'], profile='resnet50-tf', threads=4, time=10)
+INFO:imagenet:reduced image list, 49998 images not found
+INFO:imagenet:loaded 2 images, cache=0, took=0.9sec
+2019-03-06 17:09:40.398788: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: FMA
+2019-03-06 17:09:41.134865: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x562299184af0 executing computations on platform CUDA. Devices:
+2019-03-06 17:09:41.134904: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): GeForce GTX 1050 Ti, Compute Capability 6.1
+2019-03-06 17:09:41.134922: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (1): GeForce GTX 1050 Ti, Compute Capability 6.1
+2019-03-06 17:09:41.134943: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (2): GeForce GTX 1050 Ti, Compute Capability 6.1
+2019-03-06 17:09:41.134964: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (3): GeForce GTX 1050 Ti, Compute Capability 6.1
+2019-03-06 17:09:41.170719: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3799960000 Hz
+2019-03-06 17:09:41.171497: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x562293cd4420 executing computations on platform Host. Devices:
+2019-03-06 17:09:41.171570: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-03-06 17:09:41.172509: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: GeForce GTX 1050 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.493
+pciBusID: 0000:01:00.0
+totalMemory: 3.94GiB freeMemory: 3.87GiB
+2019-03-06 17:09:41.173273: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 1 with properties: 
+name: GeForce GTX 1050 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.493
+pciBusID: 0000:02:00.0
+totalMemory: 3.95GiB freeMemory: 3.88GiB
+2019-03-06 17:09:41.174038: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 2 with properties: 
+name: GeForce GTX 1050 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.493
+pciBusID: 0000:05:00.0
+totalMemory: 3.95GiB freeMemory: 3.88GiB
+2019-03-06 17:09:41.174891: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 3 with properties: 
+name: GeForce GTX 1050 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.493
+pciBusID: 0000:06:00.0
+totalMemory: 3.95GiB freeMemory: 3.88GiB
+2019-03-06 17:09:41.175797: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1, 2, 3
+2019-03-06 17:09:41.182415: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-06 17:09:41.182443: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 2 3 
+2019-03-06 17:09:41.182471: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N N N N 
+2019-03-06 17:09:41.182489: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   N N N N 
+2019-03-06 17:09:41.182506: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 2:   N N N N 
+2019-03-06 17:09:41.182523: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 3:   N N N N 
+2019-03-06 17:09:41.183891: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3663 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1050 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-03-06 17:09:41.184384: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 3677 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1050 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-03-06 17:09:41.184826: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 3677 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1050 Ti, pci bus id: 0000:05:00.0, compute capability: 6.1)
+2019-03-06 17:09:41.185242: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 3677 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1050 Ti, pci bus id: 0000:06:00.0, compute capability: 6.1)
+2019-03-06 17:09:43.501281: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+check_accuracy qps=0.25, mean=8.116613, time=8.12, tiles=50.0:8.1166,80.0:8.1174,90.0:8.1177,95.0:8.1179,99.0:8.1180,99.9:8.1180
+check_accuracy accuracy=100.00, good_items=2, total_items=2
+linear/0.01/800 qps=55.98, mean=0.030490, time=0.04, tiles=50.0:0.0305,80.0:0.0320,90.0:0.0325,95.0:0.0328,99.0:0.0330,99.9:0.0331
+linear/0.01/400 qps=54.53, mean=0.028521, time=0.04, tiles=50.0:0.0285,80.0:0.0303,90.0:0.0309,95.0:0.0312,99.0:0.0315,99.9:0.0315
+linear/0.01/200 qps=50.51, mean=0.026345, time=0.04, tiles=50.0:0.0263,80.0:0.0282,90.0:0.0288,95.0:0.0292,99.0:0.0294,99.9:0.0295
+linear/0.01/100 qps=44.01, mean=0.021883, time=0.05, tiles=50.0:0.0219,80.0:0.0239,90.0:0.0246,95.0:0.0249,99.0:0.0252,99.9:0.0253
+linear/0.01/50 qps=34.24, mean=0.018473, time=0.06, tiles=50.0:0.0185,80.0:0.0186,90.0:0.0187,95.0:0.0187,99.0:0.0187,99.9:0.0187
+linear/0.01/26 qps=20.94, mean=0.018677, time=0.10, tiles=50.0:0.0187,80.0:0.0189,90.0:0.0189,95.0:0.0190,99.0:0.0190,99.9:0.0190
+linear/0.01/14 qps=12.43, mean=0.018195, time=0.16, tiles=50.0:0.0182,80.0:0.0184,90.0:0.0185,95.0:0.0186,99.0:0.0186,99.9:0.0186
+linear/0.01/8 qps=7.43, mean=0.018884, time=0.27, tiles=50.0:0.0189,80.0:0.0190,90.0:0.0190,95.0:0.0190,99.0:0.0190,99.9:0.0190
+linear/0.01/4 qps=3.85, mean=0.018837, time=0.52, tiles=50.0:0.0188,80.0:0.0189,90.0:0.0189,95.0:0.0189,99.0:0.0189,99.9:0.0189
+linear/0.01/2 qps=1.96, mean=0.018885, time=1.02, tiles=50.0:0.0189,80.0:0.0189,90.0:0.0189,95.0:0.0189,99.0:0.0189,99.9:0.0189
+0.01 qps=1.96, mean=0.018885, time=1.02, tiles=50.0:0.0189,80.0:0.0189,90.0:0.0189,95.0:0.0189,99.0:0.0189,99.9:0.0189
+===RESULT: linear target_latency=0.01 qps=FAIL
+linear/0.05/160 qps=48.57, mean=0.025526, time=0.04, tiles=50.0:0.0255,80.0:0.0273,90.0:0.0279,95.0:0.0282,99.0:0.0285,99.9:0.0285
+^latency meet but qps is off
+linear/0.05/80 qps=41.68, mean=0.020569, time=0.05, tiles=50.0:0.0206,80.0:0.0219,90.0:0.0223,95.0:0.0225,99.0:0.0227,99.9:0.0227
+^latency meet but qps is off
+linear/0.05/40 qps=29.18, mean=0.018232, time=0.07, tiles=50.0:0.0182,80.0:0.0183,90.0:0.0184,95.0:0.0184,99.0:0.0184,99.9:0.0184
+^latency meet but qps is off
+linear/0.05/20 qps=16.86, mean=0.018496, time=0.12, tiles=50.0:0.0185,80.0:0.0185,90.0:0.0186,95.0:0.0186,99.0:0.0186,99.9:0.0186
+^latency meet but qps is off
+linear/0.05/10 qps=9.12, mean=0.018924, time=0.22, tiles=50.0:0.0189,80.0:0.0190,90.0:0.0191,95.0:0.0191,99.0:0.0191,99.9:0.0191
+^taken
+linear/0.05/15 qps=13.21, mean=0.018252, time=0.15, tiles=50.0:0.0183,80.0:0.0185,90.0:0.0186,95.0:0.0187,99.0:0.0187,99.9:0.0187
+^latency meet but qps is off
+linear/0.05/12 qps=10.81, mean=0.018367, time=0.19, tiles=50.0:0.0184,80.0:0.0185,90.0:0.0186,95.0:0.0186,99.0:0.0186,99.9:0.0186
+^latency meet but qps is off
+linear/0.05/11 qps=9.97, mean=0.018680, time=0.20, tiles=50.0:0.0187,80.0:0.0188,90.0:0.0188,95.0:0.0189,99.0:0.0189,99.9:0.0189
+^latency meet but qps is off
+0.05 qps=9.12, mean=0.018924, time=0.22, tiles=50.0:0.0189,80.0:0.0190,90.0:0.0191,95.0:0.0191,99.0:0.0191,99.9:0.0191
+===RESULT: linear target_latency=0.05 measured_latency=0.019115357398986815 qps=9
+linear/0.1/80 qps=41.77, mean=0.020630, time=0.05, tiles=50.0:0.0206,80.0:0.0219,90.0:0.0223,95.0:0.0225,99.0:0.0227,99.9:0.0227
+^latency meet but qps is off
+linear/0.1/40 qps=29.30, mean=0.018270, time=0.07, tiles=50.0:0.0183,80.0:0.0184,90.0:0.0184,95.0:0.0185,99.0:0.0185,99.9:0.0185
+^latency meet but qps is off
+linear/0.1/20 qps=16.91, mean=0.018468, time=0.12, tiles=50.0:0.0185,80.0:0.0187,90.0:0.0188,95.0:0.0188,99.0:0.0188,99.9:0.0188
+^latency meet but qps is off
+linear/0.1/10 qps=9.14, mean=0.018513, time=0.22, tiles=50.0:0.0185,80.0:0.0186,90.0:0.0186,95.0:0.0186,99.0:0.0186,99.9:0.0186
+^taken
+linear/0.1/15 qps=13.16, mean=0.018222, time=0.15, tiles=50.0:0.0182,80.0:0.0184,90.0:0.0184,95.0:0.0185,99.0:0.0185,99.9:0.0185
+^latency meet but qps is off
+linear/0.1/12 qps=10.83, mean=0.018454, time=0.18, tiles=50.0:0.0185,80.0:0.0189,90.0:0.0190,95.0:0.0191,99.0:0.0191,99.9:0.0191
+^latency meet but qps is off
+linear/0.1/11 qps=9.97, mean=0.018657, time=0.20, tiles=50.0:0.0187,80.0:0.0187,90.0:0.0187,95.0:0.0188,99.0:0.0188,99.9:0.0188
+^latency meet but qps is off
+0.1 qps=9.14, mean=0.018513, time=0.22, tiles=50.0:0.0185,80.0:0.0186,90.0:0.0186,95.0:0.0186,99.0:0.0186,99.9:0.0186
+===RESULT: linear target_latency=0.1 measured_latency=0.018593347072601317 qps=9
+linear/0.2/40 qps=29.36, mean=0.018367, time=0.07, tiles=50.0:0.0184,80.0:0.0186,90.0:0.0187,95.0:0.0188,99.0:0.0188,99.9:0.0188
+^latency meet but qps is off
+linear/0.2/20 qps=16.94, mean=0.018221, time=0.12, tiles=50.0:0.0182,80.0:0.0184,90.0:0.0185,95.0:0.0185,99.0:0.0186,99.9:0.0186
+^latency meet but qps is off
+linear/0.2/10 qps=9.15, mean=0.018372, time=0.22, tiles=50.0:0.0184,80.0:0.0184,90.0:0.0184,95.0:0.0184,99.0:0.0184,99.9:0.0184
+^taken
+linear/0.2/15 qps=13.13, mean=0.018741, time=0.15, tiles=50.0:0.0187,80.0:0.0188,90.0:0.0188,95.0:0.0188,99.0:0.0188,99.9:0.0188
+^latency meet but qps is off
+linear/0.2/12 qps=10.80, mean=0.018508, time=0.19, tiles=50.0:0.0185,80.0:0.0186,90.0:0.0187,95.0:0.0187,99.0:0.0187,99.9:0.0187
+^latency meet but qps is off
+linear/0.2/11 qps=9.95, mean=0.018852, time=0.20, tiles=50.0:0.0189,80.0:0.0189,90.0:0.0189,95.0:0.0189,99.0:0.0189,99.9:0.0189
+^latency meet but qps is off
+0.2 qps=9.15, mean=0.018372, time=0.22, tiles=50.0:0.0184,80.0:0.0184,90.0:0.0184,95.0:0.0184,99.0:0.0184,99.9:0.0184
+===RESULT: linear target_latency=0.2 measured_latency=0.018388652801513673 qps=9
+linear/0.4/20 qps=16.99, mean=0.018054, time=0.12, tiles=50.0:0.0181,80.0:0.0184,90.0:0.0185,95.0:0.0185,99.0:0.0186,99.9:0.0186
+^latency meet but qps is off
+linear/0.4/10 qps=9.13, mean=0.018756, time=0.22, tiles=50.0:0.0188,80.0:0.0188,90.0:0.0188,95.0:0.0188,99.0:0.0188,99.9:0.0188
+^taken
+linear/0.4/15 qps=13.15, mean=0.018552, time=0.15, tiles=50.0:0.0186,80.0:0.0186,90.0:0.0186,95.0:0.0186,99.0:0.0186,99.9:0.0186
+^latency meet but qps is off
+linear/0.4/12 qps=10.84, mean=0.018120, time=0.18, tiles=50.0:0.0181,80.0:0.0184,90.0:0.0185,95.0:0.0186,99.0:0.0186,99.9:0.0186
+^latency meet but qps is off
+linear/0.4/11 qps=9.98, mean=0.018360, time=0.20, tiles=50.0:0.0184,80.0:0.0184,90.0:0.0185,95.0:0.0185,99.0:0.0185,99.9:0.0185
+^latency meet but qps is off
+0.4 qps=9.13, mean=0.018756, time=0.22, tiles=50.0:0.0188,80.0:0.0188,90.0:0.0188,95.0:0.0188,99.0:0.0188,99.9:0.0188
+===RESULT: linear target_latency=0.4 measured_latency=0.018808016777038573 qps=9
+exponential/0.01/800 qps=56.00, mean=0.029349, time=0.04, tiles=50.0:0.0293,80.0:0.0314,90.0:0.0321,95.0:0.0325,99.0:0.0328,99.9:0.0328
+exponential/0.01/400 qps=53.05, mean=0.031438, time=0.04, tiles=50.0:0.0314,80.0:0.0325,90.0:0.0328,95.0:0.0330,99.0:0.0331,99.9:0.0331
+exponential/0.01/200 qps=49.52, mean=0.033182, time=0.04, tiles=50.0:0.0332,80.0:0.0335,90.0:0.0336,95.0:0.0337,99.0:0.0338,99.9:0.0338
+exponential/0.01/100 qps=42.77, mean=0.028759, time=0.05, tiles=50.0:0.0288,80.0:0.0303,90.0:0.0308,95.0:0.0310,99.0:0.0312,99.9:0.0313
+exponential/0.01/50 qps=34.03, mean=0.024017, time=0.06, tiles=50.0:0.0240,80.0:0.0264,90.0:0.0272,95.0:0.0276,99.0:0.0279,99.9:0.0280
+exponential/0.01/26 qps=24.42, mean=0.020901, time=0.08, tiles=50.0:0.0209,80.0:0.0221,90.0:0.0225,95.0:0.0227,99.0:0.0228,99.9:0.0229
+exponential/0.01/14 qps=15.75, mean=0.018268, time=0.13, tiles=50.0:0.0183,80.0:0.0187,90.0:0.0188,95.0:0.0189,99.0:0.0189,99.9:0.0189
+exponential/0.01/8 qps=9.55, mean=0.018257, time=0.21, tiles=50.0:0.0183,80.0:0.0184,90.0:0.0185,95.0:0.0185,99.0:0.0185,99.9:0.0185
+exponential/0.01/4 qps=4.99, mean=0.018639, time=0.40, tiles=50.0:0.0186,80.0:0.0188,90.0:0.0189,95.0:0.0189,99.0:0.0189,99.9:0.0190
+exponential/0.01/2 qps=2.55, mean=0.018764, time=0.78, tiles=50.0:0.0188,80.0:0.0188,90.0:0.0188,95.0:0.0188,99.0:0.0188,99.9:0.0188
+0.01 qps=2.55, mean=0.018764, time=0.78, tiles=50.0:0.0188,80.0:0.0188,90.0:0.0188,95.0:0.0188,99.0:0.0188,99.9:0.0188
+===RESULT: exponential target_latency=0.01 qps=FAIL
+exponential/0.05/160 qps=47.57, mean=0.030510, time=0.04, tiles=50.0:0.0305,80.0:0.0316,90.0:0.0320,95.0:0.0322,99.0:0.0323,99.9:0.0323
+^latency meet but qps is off
+exponential/0.05/80 qps=40.51, mean=0.026000, time=0.05, tiles=50.0:0.0260,80.0:0.0284,90.0:0.0293,95.0:0.0297,99.0:0.0300,99.9:0.0301
+^latency meet but qps is off
+exponential/0.05/40 qps=31.12, mean=0.022635, time=0.06, tiles=50.0:0.0226,80.0:0.0246,90.0:0.0252,95.0:0.0255,99.0:0.0258,99.9:0.0259
+^latency meet but qps is off
+exponential/0.05/20 qps=21.03, mean=0.018512, time=0.10, tiles=50.0:0.0185,80.0:0.0185,90.0:0.0186,95.0:0.0186,99.0:0.0186,99.9:0.0186
+^taken
+exponential/0.05/30 qps=26.64, mean=0.021113, time=0.08, tiles=50.0:0.0211,80.0:0.0228,90.0:0.0233,95.0:0.0236,99.0:0.0238,99.9:0.0239
+^latency meet but qps is off
+exponential/0.05/25 qps=24.07, mean=0.020070, time=0.08, tiles=50.0:0.0201,80.0:0.0211,90.0:0.0214,95.0:0.0215,99.0:0.0217,99.9:0.0217
+^taken
+exponential/0.05/28 qps=25.60, mean=0.020985, time=0.08, tiles=50.0:0.0210,80.0:0.0224,90.0:0.0229,95.0:0.0231,99.0:0.0233,99.9:0.0234
+^latency meet but qps is off
+exponential/0.05/26 qps=24.56, mean=0.020580, time=0.08, tiles=50.0:0.0206,80.0:0.0217,90.0:0.0221,95.0:0.0223,99.0:0.0224,99.9:0.0225
+exponential/0.05/27 qps=25.11, mean=0.020619, time=0.08, tiles=50.0:0.0206,80.0:0.0220,90.0:0.0224,95.0:0.0226,99.0:0.0228,99.9:0.0229
+^taken
+0.05 qps=25.11, mean=0.020619, time=0.08, tiles=50.0:0.0206,80.0:0.0220,90.0:0.0224,95.0:0.0226,99.0:0.0228,99.9:0.0229
+===RESULT: exponential target_latency=0.05 measured_latency=0.022820844650268554 qps=25
+exponential/0.1/80 qps=40.57, mean=0.025197, time=0.05, tiles=50.0:0.0252,80.0:0.0281,90.0:0.0291,95.0:0.0295,99.0:0.0299,99.9:0.0300
+^latency meet but qps is off
+exponential/0.1/40 qps=31.13, mean=0.022667, time=0.06, tiles=50.0:0.0227,80.0:0.0246,90.0:0.0252,95.0:0.0255,99.0:0.0258,99.9:0.0258
+^latency meet but qps is off
+exponential/0.1/20 qps=21.01, mean=0.018551, time=0.10, tiles=50.0:0.0186,80.0:0.0186,90.0:0.0186,95.0:0.0186,99.0:0.0186,99.9:0.0186
+^taken
+exponential/0.1/30 qps=26.62, mean=0.021175, time=0.08, tiles=50.0:0.0212,80.0:0.0229,90.0:0.0234,95.0:0.0237,99.0:0.0240,99.9:0.0240
+^latency meet but qps is off
+exponential/0.1/25 qps=23.95, mean=0.020478, time=0.08, tiles=50.0:0.0205,80.0:0.0215,90.0:0.0218,95.0:0.0220,99.0:0.0221,99.9:0.0221
+^taken
+exponential/0.1/28 qps=25.60, mean=0.020999, time=0.08, tiles=50.0:0.0210,80.0:0.0224,90.0:0.0229,95.0:0.0231,99.0:0.0233,99.9:0.0233
+^latency meet but qps is off
+exponential/0.1/26 qps=24.41, mean=0.020946, time=0.08, tiles=50.0:0.0209,80.0:0.0221,90.0:0.0225,95.0:0.0227,99.0:0.0229,99.9:0.0229
+^taken
+exponential/0.1/27 qps=24.99, mean=0.021078, time=0.08, tiles=50.0:0.0211,80.0:0.0224,90.0:0.0228,95.0:0.0230,99.0:0.0232,99.9:0.0233
+^latency meet but qps is off
+0.1 qps=24.41, mean=0.020946, time=0.08, tiles=50.0:0.0209,80.0:0.0221,90.0:0.0225,95.0:0.0227,99.0:0.0229,99.9:0.0229
+===RESULT: exponential target_latency=0.1 measured_latency=0.02286055088043213 qps=24
+exponential/0.2/40 qps=30.89, mean=0.023038, time=0.06, tiles=50.0:0.0230,80.0:0.0250,90.0:0.0257,95.0:0.0260,99.0:0.0263,99.9:0.0263
+^latency meet but qps is off
+exponential/0.2/20 qps=21.00, mean=0.018544, time=0.10, tiles=50.0:0.0185,80.0:0.0186,90.0:0.0186,95.0:0.0186,99.0:0.0186,99.9:0.0186
+^taken
+exponential/0.2/30 qps=26.52, mean=0.021458, time=0.08, tiles=50.0:0.0215,80.0:0.0231,90.0:0.0237,95.0:0.0240,99.0:0.0242,99.9:0.0242
+^latency meet but qps is off
+exponential/0.2/25 qps=24.08, mean=0.019986, time=0.08, tiles=50.0:0.0200,80.0:0.0210,90.0:0.0213,95.0:0.0215,99.0:0.0216,99.9:0.0217
+^taken
+exponential/0.2/28 qps=25.64, mean=0.020734, time=0.08, tiles=50.0:0.0207,80.0:0.0222,90.0:0.0227,95.0:0.0229,99.0:0.0231,99.9:0.0232
+^latency meet but qps is off
+exponential/0.2/26 qps=24.39, mean=0.020957, time=0.08, tiles=50.0:0.0210,80.0:0.0222,90.0:0.0226,95.0:0.0228,99.0:0.0230,99.9:0.0230
+exponential/0.2/27 qps=25.18, mean=0.020532, time=0.08, tiles=50.0:0.0205,80.0:0.0218,90.0:0.0222,95.0:0.0224,99.0:0.0226,99.9:0.0226
+^taken
+0.2 qps=25.18, mean=0.020532, time=0.08, tiles=50.0:0.0205,80.0:0.0218,90.0:0.0222,95.0:0.0224,99.0:0.0226,99.9:0.0226
+===RESULT: exponential target_latency=0.2 measured_latency=0.02260927200317383 qps=25
+exponential/0.4/20 qps=21.03, mean=0.018467, time=0.10, tiles=50.0:0.0185,80.0:0.0185,90.0:0.0185,95.0:0.0185,99.0:0.0185,99.9:0.0185
+^taken
+exponential/0.4/50010 qps=57.23, mean=0.033030, time=0.03, tiles=50.0:0.0330,80.0:0.0331,90.0:0.0331,95.0:0.0332,99.0:0.0332,99.9:0.0332
+^latency meet but qps is off
+exponential/0.4/25015 qps=57.24, mean=0.032353, time=0.03, tiles=50.0:0.0324,80.0:0.0330,90.0:0.0332,95.0:0.0333,99.0:0.0334,99.9:0.0334
+^latency meet but qps is off
+exponential/0.4/12518 qps=58.53, mean=0.028290, time=0.03, tiles=50.0:0.0283,80.0:0.0309,90.0:0.0318,95.0:0.0323,99.0:0.0326,99.9:0.0327
+^latency meet but qps is off
+exponential/0.4/6269 qps=57.78, mean=0.029458, time=0.03, tiles=50.0:0.0295,80.0:0.0316,90.0:0.0323,95.0:0.0326,99.0:0.0329,99.9:0.0330
+^latency meet but qps is off
+exponential/0.4/3144 qps=58.02, mean=0.029757, time=0.03, tiles=50.0:0.0298,80.0:0.0318,90.0:0.0325,95.0:0.0328,99.0:0.0331,99.9:0.0331
+^latency meet but qps is off
+exponential/0.4/1582 qps=57.18, mean=0.033586, time=0.03, tiles=50.0:0.0336,80.0:0.0338,90.0:0.0339,95.0:0.0339,99.0:0.0340,99.9:0.0340
+^latency meet but qps is off
+exponential/0.4/801 qps=56.29, mean=0.029838, time=0.04, tiles=50.0:0.0298,80.0:0.0317,90.0:0.0324,95.0:0.0327,99.0:0.0329,99.9:0.0330
+^latency meet but qps is off
+exponential/0.4/410 qps=54.01, mean=0.030240, time=0.04, tiles=50.0:0.0302,80.0:0.0318,90.0:0.0323,95.0:0.0325,99.0:0.0327,99.9:0.0328
+^latency meet but qps is off
+exponential/0.4/215 qps=50.26, mean=0.029094, time=0.04, tiles=50.0:0.0291,80.0:0.0312,90.0:0.0319,95.0:0.0322,99.0:0.0325,99.9:0.0325
+^latency meet but qps is off
+exponential/0.4/118 qps=44.77, mean=0.028775, time=0.04, tiles=50.0:0.0288,80.0:0.0304,90.0:0.0310,95.0:0.0313,99.0:0.0315,99.9:0.0315
+^latency meet but qps is off
+exponential/0.4/69 qps=39.14, mean=0.023865, time=0.05, tiles=50.0:0.0239,80.0:0.0268,90.0:0.0278,95.0:0.0283,99.0:0.0287,99.9:0.0288
+^latency meet but qps is off
+exponential/0.4/44 qps=32.79, mean=0.022564, time=0.06, tiles=50.0:0.0226,80.0:0.0247,90.0:0.0254,95.0:0.0257,99.0:0.0260,99.9:0.0261
+^latency meet but qps is off
+exponential/0.4/32 qps=27.90, mean=0.021512, time=0.07, tiles=50.0:0.0215,80.0:0.0228,90.0:0.0233,95.0:0.0235,99.0:0.0237,99.9:0.0237
+^latency meet but qps is off
+exponential/0.4/26 qps=24.55, mean=0.020477, time=0.08, tiles=50.0:0.0205,80.0:0.0217,90.0:0.0221,95.0:0.0223,99.0:0.0225,99.9:0.0225
+^taken
+exponential/0.4/29 qps=26.03, mean=0.021137, time=0.08, tiles=50.0:0.0211,80.0:0.0228,90.0:0.0233,95.0:0.0236,99.0:0.0238,99.9:0.0239
+^latency meet but qps is off
+exponential/0.4/28 qps=25.47, mean=0.021266, time=0.08, tiles=50.0:0.0213,80.0:0.0227,90.0:0.0232,95.0:0.0235,99.0:0.0237,99.9:0.0237
+^latency meet but qps is off
+exponential/0.4/27 qps=25.05, mean=0.020837, time=0.08, tiles=50.0:0.0208,80.0:0.0221,90.0:0.0226,95.0:0.0228,99.0:0.0230,99.9:0.0230
+^taken
+0.4 qps=25.05, mean=0.020837, time=0.08, tiles=50.0:0.0208,80.0:0.0221,90.0:0.0226,95.0:0.0228,99.0:0.0230,99.9:0.0230
+===RESULT: exponential target_latency=0.4 measured_latency=0.022978465557098388 qps=25
+===FINAL_RESULT: {'linear': {'0.01': -1, '0.05': 10, '0.1': 10, '0.2': 10, '0.4': 10}, 'exponential': {'0.01': -1, '0.05': 28, '0.1': 26, '0.2': 28, '0.4': 28}}
+ENDING RUN AT 2019-03-06 05:10:00 PM

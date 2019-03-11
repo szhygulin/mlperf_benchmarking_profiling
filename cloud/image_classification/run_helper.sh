@@ -5,7 +5,8 @@ sync && echo 3 | tee /host_proc/sys/vm/drop_caches
 
 cd /root
 
-common_opt="--count 500 --time 10"
+common_opt="--time 10"
+#common_opt="--count 500 --time 10"
 dataset="--dataset-path /data"
 
 if [ $profile == "resnet50-tf" ] ; then

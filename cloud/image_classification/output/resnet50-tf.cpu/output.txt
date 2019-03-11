@@ -1,0 +1,13 @@
+Clearing caches.
+3
+STARTING RUN AT 2019-02-25 12:04:17 PM
+Namespace(backend='tensorflow', batch_size=1, cache=0, count=500, data_format=None, dataset='imagenet', dataset_list=None, dataset_path='/data', inputs=['input_tensor:0'], max_latency=[0.01, 0.05, 0.1, 0.2, 0.4], model='/model/resnet50_v1.pb', output='/output/results.json', outputs=['ArgMax:0'], profile='resnet50-tf', threads=4, time=10)
+Traceback (most recent call last):
+  File "python/main.py", line 382, in <module>
+    main()
+  File "python/main.py", line 330, in main
+    count=args.count, **kwargs)
+  File "/root/python/imagenet.py", line 47, in __init__
+    with open(image_list, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/data/val_map.txt'
+ENDING RUN AT 2019-02-25 12:04:20 PM

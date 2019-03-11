@@ -9,6 +9,7 @@ import time
 
 import numpy as np
 
+#counter = 0
 
 class Item():
     def __init__(self, label, img, idx):
@@ -172,15 +173,24 @@ def resize_with_aspectratio(img, out_height, out_width, scale=87.5):
 
 def pre_process_vgg(img, dims=None, need_transpose=False):
     output_height, output_width, _ = dims
-
+    if len(img.getbands()) != 3:
+        img = img.convert("RGB")
+    #print('1',img.getbands())
     img = resize_with_aspectratio(img, output_height, output_width)
+    #print('2',img.size)
     img = center_crop(img, output_height, output_width)
+    #print('3',img.size)
     img = np.asarray(img, dtype='float32')
+    #print('4',img.shape)
     if len(img.shape) != 3:
         img = np.stack([img] * 3, axis=2)
 
     # normalize image
     means = np.array([123.68, 116.78, 103.94], dtype=np.float32)
+    #print(img.shape)
+    #global counter
+    #print(counter)
+    #counter += 1
     img -= means
 
     # transpose if needed
